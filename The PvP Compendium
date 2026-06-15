@@ -1,0 +1,316 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft PvP Mastery | The Ultimate Guide</title>
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --primary: #00e676;
+            --secondary: #ff3d00;
+            --text-main: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --java-color: #ffaa00;
+            --bedrock-color: #00aaff;
+        }
+
+        * { box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(180deg, #111 0%, #0a0a0a 100%);
+            padding: 6rem 2rem;
+            text-align: center;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(90deg, var(--primary), #00b359);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p { font-size: 1.3rem; color: var(--text-muted); max-width: 700px; margin: 1rem auto 0; }
+
+        /* Container & Grid */
+        .container { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+        
+        .section-header {
+            font-size: 2.2rem;
+            border-left: 5px solid var(--primary);
+            padding-left: 15px;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid #333;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 230, 118, 0.1);
+        }
+
+        /* Version Tags */
+        .tag { display: inline-block; padding: 4px 10px; border-radius: 4px; font-weight: bold; font-size: 0.8rem; margin-bottom: 10px;}
+        .tag-java { background: rgba(255, 170, 0, 0.2); color: var(--java-color); border: 1px solid var(--java-color); }
+        .tag-bedrock { background: rgba(0, 170, 255, 0.2); color: var(--bedrock-color); border: 1px solid var(--bedrock-color); }
+
+        /* Interactive Elements */
+        .interactive-box {
+            background: #111;
+            border: 2px dashed #444;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+            margin: 5px;
+        }
+
+        .btn:hover { background: #00c853; transform: scale(1.05); }
+
+        /* Aim Trainer CSS */
+        #aim-arena {
+            width: 100%;
+            height: 250px;
+            background: #222;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            cursor: crosshair;
+        }
+        .target {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary);
+            border-radius: 50%;
+            position: absolute;
+            cursor: crosshair;
+            transition: transform 0.1s;
+        }
+        .target:active { transform: scale(0.8); }
+
+        /* W-Tap CSS */
+        #wtap-arena { height: 100px; background: #222; position: relative; border-radius: 8px; overflow: hidden; margin-top: 15px;}
+        .entity { width: 30px; height: 30px; position: absolute; top: 35px; border-radius: 4px; }
+        #wtap-player { background: var(--primary); left: 50px; }
+        #wtap-opp { background: var(--secondary); left: 160px; transition: left 0.1s ease-out; }
+
+        footer { text-align: center; padding: 3rem; color: #666; border-top: 1px solid #222; margin-top: 4rem; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The PvP Compendium</h1>
+        <p>Mastering mechanics over mindlessly clicking. Explore spacing, aim tracking, and the core differences across game versions.</p>
+    </header>
+
+    <div class="container">
+
+        <h2 class="section-header">1. The Version Divide: Java vs. Bedrock</h2>
+        <div class="grid-2">
+            <div class="card">
+                <span class="tag tag-java">Java Edition (1.9+)</span>
+                <h3>The Rhythm of Combat</h3>
+                <p>Java PvP is all about <strong>timing and resource management</strong>. Attack cooldowns mean that spam clicking actually hurts your damage output.</p>
+                <ul>
+                    <li><strong>Sweep Attacks:</strong> Excellent for crowd control and keeping multiple enemies back.</li>
+                    <li><strong>Shields & Axes:</strong> Axes disable shields. Timing your axe crit after baiting a shield block is the highest burst damage possible.</li>
+                    <li><strong>Crystal PvP:</strong> End-game combat relies entirely on placing and exploding End Crystals instantly. It's about hotkey speed, not sword aiming.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <span class="tag tag-bedrock">Bedrock & 1.8 Combat</span>
+                <h3>The Combo Lock</h3>
+                <p>Without attack cooldowns, combat is decided by <strong>aim tracking and knockback manipulation</strong>. The player who clicks faster (while keeping perfect aim) wins.</p>
+                <ul>
+                    <li><strong>Hit Registration:</strong> You need high CPS (Clicks Per Second) to maximize the chance of a hit registering the millisecond your opponent enters your reach.</li>
+                    <li><strong>Snowballs/Rods:</strong> Using projectiles right before swinging your sword interrupts your opponent's momentum, making it easier to start a combo.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-header">2. The Golden Rule: Spacing</h2>
+        <div class="card">
+            <h3>Interactive W-Tap Simulator</h3>
+            <p>Hitting an opponent gives them knockback, but holding 'W' limits *how much* knockback you deal. Reset your sprint (let go of W, then press it again) instantly after a hit to deal maximum knockback and keep them out of their 3.0 block reach.</p>
+            
+            <div class="interactive-box">
+                <button class="btn" id="toggleSprint">Sprint: ON</button>
+                <button class="btn" id="hitBtn" style="background: var(--secondary); color: white;">Attack!</button>
+                <button class="btn" id="resetSim" style="background: #444; color: white;">Reset Position</button>
+                
+                <div id="wtap-arena">
+                    <div id="wtap-player" class="entity"></div>
+                    <div id="wtap-opp" class="entity"></div>
+                </div>
+                <p id="wtap-log" style="font-family: monospace; color: #00e676; margin-top: 10px;">Distance is tight. Ready to attack.</p>
+            </div>
+        </div>
+
+        <h2 class="section-header">3. Precision Tracking</h2>
+        <p>Your CPS and W-tapping mean nothing if your crosshair isn't on the target. In intense PvP, players will strafe left and right. Practice flicking and tracking your mouse accurately.</p>
+        
+        <div class="card">
+            <h3>Aim & Reflex Trainer</h3>
+            <p>Click the targets as fast as they appear. Don't just swing wildly—focus on precise, deliberate movements.</p>
+            <div class="interactive-box">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <strong id="scoreDisplay">Score: 0</strong>
+                    <strong id="timeDisplay">Time: 15s</strong>
+                </div>
+                <button class="btn" id="startAimBtn">Start Training</button>
+                <div id="aim-arena">
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Built for the true PvP enthusiasts. Stop experimenting. Start experiencing.</p>
+    </footer>
+
+    <script>
+        // --- W-TAP SIMULATOR LOGIC ---
+        let isSprinting = true;
+        let hasHitWhileSprinting = false;
+        let oppPos = 160;
+        const wtapOpp = document.getElementById('wtap-opp');
+        const wtapLog = document.getElementById('wtap-log');
+
+        document.getElementById('toggleSprint').addEventListener('click', function() {
+            isSprinting = !isSprinting;
+            this.innerText = isSprinting ? "Sprint: ON" : "Sprint: OFF";
+            this.style.background = isSprinting ? "var(--primary)" : "#555";
+            if (!isSprinting) hasHitWhileSprinting = false; // Sprint Reset!
+        });
+
+        document.getElementById('resetSim').addEventListener('click', () => {
+            oppPos = 160;
+            wtapOpp.style.left = oppPos + 'px';
+            wtapLog.innerText = "Positions reset.";
+            wtapLog.style.color = "var(--text-muted)";
+        });
+
+        document.getElementById('hitBtn').addEventListener('click', () => {
+            if (oppPos > 300) {
+                wtapLog.innerText = "Miss! Opponent is out of reach.";
+                wtapLog.style.color = "var(--secondary)";
+                return;
+            }
+
+            if (isSprinting && !hasHitWhileSprinting) {
+                oppPos += 60; // Big knockback
+                hasHitWhileSprinting = true;
+                wtapLog.innerText = "MASSIVE KNOCKBACK! (Sprint was fresh). Now you MUST toggle Sprint off/on to reset.";
+                wtapLog.style.color = "var(--primary)";
+            } else if (isSprinting && hasHitWhileSprinting) {
+                oppPos += 15; // Weak knockback
+                wtapLog.innerText = "Weak hit... You forgot to reset sprint. They can hit you back now.";
+                wtapLog.style.color = "var(--secondary)";
+            } else {
+                oppPos += 25; // Walking knockback
+                wtapLog.innerText = "Standard hit. Turn sprint on for more power.";
+                wtapLog.style.color = "var(--text-muted)";
+            }
+            wtapOpp.style.left = oppPos + 'px';
+        });
+
+        // --- AIM TRAINER LOGIC ---
+        const aimArena = document.getElementById('aim-arena');
+        const startAimBtn = document.getElementById('startAimBtn');
+        const scoreDisplay = document.getElementById('scoreDisplay');
+        const timeDisplay = document.getElementById('timeDisplay');
+        
+        let score = 0;
+        let timeLeft = 15;
+        let aimTimer;
+        let currentTarget = null;
+
+        function spawnTarget() {
+            if (currentTarget) currentTarget.remove();
+            
+            const target = document.createElement('div');
+            target.className = 'target';
+            
+            // Calculate random positions inside the arena
+            const maxX = aimArena.clientWidth - 40;
+            const maxY = aimArena.clientHeight - 40;
+            
+            target.style.left = Math.floor(Math.random() * maxX) + 'px';
+            target.style.top = Math.floor(Math.random() * maxY) + 'px';
+            
+            target.addEventListener('mousedown', () => {
+                score++;
+                scoreDisplay.innerText = `Score: ${score}`;
+                spawnTarget();
+            });
+
+            aimArena.appendChild(target);
+            currentTarget = target;
+        }
+
+        startAimBtn.addEventListener('click', () => {
+            startAimBtn.style.display = 'none';
+            score = 0;
+            timeLeft = 15;
+            scoreDisplay.innerText = `Score: 0`;
+            timeDisplay.innerText = `Time: 15s`;
+            
+            spawnTarget();
+
+            aimTimer = setInterval(() => {
+                timeLeft--;
+                timeDisplay.innerText = `Time: ${timeLeft}s`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(aimTimer);
+                    if (currentTarget) currentTarget.remove();
+                    startAimBtn.style.display = 'inline-block';
+                    startAimBtn.innerText = 'Play Again';
+                    timeDisplay.innerText = "Time's up!";
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
